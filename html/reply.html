@@ -1,0 +1,43 @@
+<html>
+<head>
+</head>
+<header>
+	<style type="text/css">
+	table {
+		border-collapse: collapse;
+			
+	}
+	</style>
+</header>
+<body>
+	Kids<br>
+	<table border="1">
+		<tr><td>Last Name</td><td>First Name</td><td>Attending Service</td><td>Attending Party</td><td>Shirt Size</td></tr>
+		{% for kid in kids %}
+		<tr><td>{{kid.last_name}}</td><td>{{kid.first_name}}</td><td>{{kid.attending_service}}</td><td>{{kid.attending_party}}</td><td>{{kid.shirt_size}}</td></tr>
+		{% endfor %}
+	</table><br>
+	Intown<br>
+	<table border="1">
+		<tr><td>Last Name</td><td>First Name</td><td>Attending Service</td><td>Attending Party</td></tr>
+		{% for intown in intowns %}
+		<tr><td>{{intown.last_name}}</td><td>{{intown.first_name}}</td><td>{{intown.attending_service}}</td><td>{{intown.attending_party}}</td></tr>
+		{% endfor %}
+	</table><br>
+	Out-of-town<br>
+	<table border="1">
+		<tr><td>Last Name</td><td>First Name</td><td>Attending Service</td><td>Attending Party</td><td>Attending Dinner</td><td>Attending Brunch</td></tr>
+		{% for outoftown in outoftowns %}
+		<tr><td>{{outoftown.last_name}}</td><td>{{outoftown.first_name}}</td><td>{{outoftown.attending_service}}</td><td>{{outoftown.attending_party}}</td><td>{{outoftown.attending_dinner}}</td><td>{{outoftown.attending_brunch}}</td></tr>
+		{% endfor %}
+	</table><br>
+	All replies<br>
+	<table border="1">
+		<tr><td>Last Name</td><td>First Name</td><td>Attending Service</td><td>Attending Party</td></tr>
+		{% for user in users %}
+		<tr><td>{{user.last_name}}</td><td>{{user.first_name}}</td><td>{{user.attending_service}}</td><td>{{user.attending_party}}</td></tr>
+		{% endfor %}
+	</table>
+
+</body>
+</html>

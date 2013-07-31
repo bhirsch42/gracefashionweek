@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style>
+body {
+	font-family:"Arial", Arial, sans-serif;
+}
+a {
+	font-weight: bold;
+}
+td.left {
+	text-align: right;
+	vertical-align: top;
+}
+div.RSVP {
+	font-size: 30;
+}
+li.topbar{
+	display: inline-block;
+	margin-right: 20px;
+}
+div.error{
+	color: red;
+}
+div.t {
+	font-size: 20
+}
+</style>
+</head>
+<header>
+	<title>Grace Kerendi's Fashion Weekend RSVP</title>
+</header>
+<body>
+	<center>
+		<img src="http://i.imgur.com/FHiWagu.png"><br><br>
+		<div class="t">Grace Kerendi's Fashion Weekend RSVP</div><br>
+	</center>
+	<hr>
+	<center>
+	<ul>
+		<li class="topbar"><a href="/kids">KIDS</a></li>
+		<li class="topbar"><a href="/intown">INTOWN GUESTS</a></li>
+		<li class="topbar"><a href="/outoftown">OUT-OF-TOWN GUESTS</a></li>
+	</ul>
+</center>
+	<hr>
+	{% block content %}
+
+	{% endblock content %}
+
+</body>
+
+</html>

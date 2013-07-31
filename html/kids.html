@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center>
+	<div class="RSVP">Kids RSVP</div><br>
+	{% if error %}<div class="error">You must fill out all fields!</div>{% endif %}
+	<form method="POST">
+		<table cellpadding="5">
+			<tr>
+				<td class="left">Last Name</td>
+				<td><input type="text" name="last_name"></td>
+			</tr>
+			<tr>
+				<td class="left">First Name</td>
+				<td><input type="text" name="first_name"></td>
+			</tr>
+			<tr>
+				<td class="left">Will you attend the Saturday morning<br>service and luncheon at The Temple?</td>
+				<td><input type="radio" name="attending_service" value="Yes" id="Yes"><label for="Yes">Yes</label>
+					<input type="radio" name="attending_service" value="No" id="No"><label for="No">No</label></td>
+			</tr>
+			<tr>
+				<td class="left">Will you attend the Saturday Evening<br>Party at Ansley Golf Club?</td>
+				<td><input type="radio" name="attending_party" value="Yes" id="Yes1"><label for="Yes1">Yes</label>
+					<input type="radio" name="attending_party" value="No" id="No1"><label for="No1">No</label></td>
+			</tr>
+			<tr>
+				<td class="left">Please select your shirt size.</td>
+				<td>
+					<input type="radio" name="shirt_size" value="Youth Large" id="shirt1"><label for="shirt1">Youth Large</label><br>
+					<input type="radio" name="shirt_size" value="Youth Extra Large" id="shirt2"><label for="shirt2">Youth Extra Large</label><br>
+					<input type="radio" name="shirt_size" value="Adult Small" id="shirt3"><label for="shirt3">Adult Small</label><br>
+					<input type="radio" name="shirt_size" value="Adult Medium" id="shirt4"><label for="shirt4">Adult Medium</label><br>
+					<input type="radio" name="shirt_size" value="Adult Large" id="shirt5"><label for="shirt5">Adult Large</label><br>
+					<input type="radio" name="shirt_size" value="Adult Extra Large" id="shirt6"><label for="shirt6">Adult Extra Large</label>
+				</td>
+			</tr>
+		</table>
+		<input type="submit">
+	</form>
+</center>
+{% endblock content%}

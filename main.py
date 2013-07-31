@@ -15,11 +15,18 @@
 # limitations under the License.
 #
 import webapp2
+from Handler import *
+from FormHandlers import *
+from ReplyHandler import *
 
-class MainHandler(webapp2.RequestHandler):
+class MainHandler(Handler):
     def get(self):
-        self.response.write('Hello world!')
+        self.redirect('/kids')
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/kids', KidsHandler),
+    ('/intown', IntownHandler),
+    ('/outoftown', OutoftownHandler),
+    ('/replies', ReplyHandler)
 ], debug=True)

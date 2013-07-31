@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center>
+	<div class="RSVP">Intown RSVP</div><br>
+	{% if error %}<div class="error">You must fill out all fields!</div>{% endif %}
+	<form method="POST">
+		<table cellpadding="5">
+			<tr>
+				<td class="left">Last Name</td>
+				<td><input type="text" name="last_name"></td>
+			</tr>
+			<tr>
+				<td class="left">First Name(s)</td>
+				<td><input type="text" name="first_name"></td>
+			</tr>
+			<tr>
+				<td class="left">Will you attend the Saturday morning<br>service and luncheon at The Temple?</td>
+				<td><input type="radio" name="attending_service" value="Yes" id="Yes"><label for="Yes">Yes</label>
+					<input type="radio" name="attending_service" value="No" id="No"><label for="No">No</label></td>
+			</tr>
+			<tr>
+				<td class="left">Will you attend the Saturday Evening<br>Party at Ansley Golf Club?</td>
+				<td><input type="radio" name="attending_party" value="Yes" id="Yes1"><label for="Yes1">Yes</label>
+					<input type="radio" name="attending_party" value="No" id="No1"><label for="No1">No</label></td>
+			</tr>
+		</table>
+		<input type="submit">
+	</form>
+</center>
+{% endblock content%}
