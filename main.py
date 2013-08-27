@@ -24,9 +24,6 @@ class MainHandler(Handler):
         self.redirect('/kids')
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler),
-    ('/kids', KidsHandler),
-    ('/intown', IntownHandler),
-    ('/outoftown', OutoftownHandler),
+    ('/', KidsHandler),
     ('/replies', ReplyHandler)
 ], debug=True)
